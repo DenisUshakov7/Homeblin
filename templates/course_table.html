@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Course Table</title>
+</head>
+<body>
+  <h2>Домашка {{ hw_name }}</h2>
+  <table border="1">
+    <tr>
+      <th>Имя</th>
+      <th>Группа</th>
+      <th>Баллы</th>
+    </tr>
+    {% for row in scores %}
+    <tr>
+      <td>{{ row.name }}</td>
+      <td>{{ row.group }}</td>
+      <td>{{ row.score }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
